@@ -75,7 +75,7 @@ public class Reader {
             if (validator.validateFile(fileCopy)) {
 
                 for (String l : fileCopy) {
-                    Map<Event, Double> events = new HashMap<Event, Double>();
+                    Map<Event, Double> events = new HashMap<>();
                     String[] data = l.split(separator);
                     String performance;
                     double parsedPerformance;

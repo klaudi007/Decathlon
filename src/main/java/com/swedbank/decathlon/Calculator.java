@@ -70,7 +70,7 @@ public class Calculator {
 
         athletes.sort((o1, o2) -> o1.getScore() - o2.getScore());
 
-        Set<Athlete> uniques = new HashSet<Athlete>();
+        Set<Athlete> uniques = new HashSet<>();
         Map<Integer, String> scoresCount = new HashMap<>();
 
         int elementIndex = 0;

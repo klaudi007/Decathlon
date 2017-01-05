@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import static org.junit.Assert.assertEquals;
 
@@ -19,6 +20,8 @@ import static org.junit.Assert.assertEquals;
 public class CalculatorTest {
 
     private final static String TEST_INPUT_FILE = "src/test/resources/Decathlon_input_test.txt";
+
+
 
     private static final int Siim_Susi_Score = 4200;
     private static final int Beata_Kana_Score = 3199;
@@ -41,6 +44,11 @@ public class CalculatorTest {
 
     @Test
     public void calculateScoreTest(){
+
+        athletes.forEach(x -> {
+            System.out.println("place: "+x.getPlace()+", score: "+x.getScore()+", name: "+x.getName());
+        });
+
         assertEquals(athletes.get(0).getScore(), Beata_Kana_Score);
         assertEquals(athletes.get(1).getScore(), Jaana_Lind_Score);
         assertEquals(athletes.get(2).getScore(), Siim_Susi_Score);

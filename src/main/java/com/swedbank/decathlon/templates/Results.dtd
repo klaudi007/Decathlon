@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT decathlon (athlete+)>
+        <!ELEMENT athlete (place, score, name, results)>
+        <!ELEMENT place (#PCDATA)>
+        <!ELEMENT score (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT results (sprint100m, longjump, shotput, highjump, sprint400m, hurdles110m, discusthrow, polevault, javelinthrow, race1500m)>
+        <!ATTLIST results
+                name CDATA #REQUIRED
+                place CDATA #REQUIRED
+                score CDATA #REQUIRED>
+        <!ELEMENT sprint100m (#PCDATA)>
+        <!ELEMENT longjump (#PCDATA)>
+        <!ELEMENT shotput (#PCDATA)>
+        <!ELEMENT highjump (#PCDATA)>
+        <!ELEMENT sprint400m (#PCDATA)>
+        <!ELEMENT hurdles110m (#PCDATA)>
+        <!ELEMENT discusthrow (#PCDATA)>
+        <!ELEMENT polevault (#PCDATA)>
+        <!ELEMENT javelinthrow (#PCDATA)>
+        <!ELEMENT race1500m (#PCDATA)>

@@ -5,7 +5,10 @@ import com.roadlog.model.Athlete;
 import com.roadlog.model.Athletes;
 import com.roadlog.service.api.Decathlon;
 import com.roadlog.util.Connector;
+import com.roadlog.util.Validator;
+import com.roadlog.util.ValidatorImpl;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,7 +26,13 @@ public class AthleteRepositoryImpl implements AthleteRepository{
 
     @Override
     public List<Athlete> getAll() {
-        return decathlon.getAthletesPerformanceByEvent(connector.readStream());
+        List<String[]> results = connector.readStream();
+        Validator validator = new ValidatorImpl();
+        List<Athlete> athletes = new ArrayList<>();
+        if(validator.validateInput(results)){
+            athletes = decathlon.getAthletesPerformanceByEvent(results);
+        }
+        return athletes;
     }
 
     @Override

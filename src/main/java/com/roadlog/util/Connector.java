@@ -1,5 +1,6 @@
 package com.roadlog.util;
 
+import com.roadlog.exception.DecathlonException;
 import com.roadlog.model.Athletes;
 
 import javax.xml.bind.JAXBContext;
@@ -23,6 +24,8 @@ public class Connector {
     public static String input;
 
     public static String output;
+
+    private static final Validator validator = new ValidatorImpl();
 
     public List<String[]> readStream(){
         String line;

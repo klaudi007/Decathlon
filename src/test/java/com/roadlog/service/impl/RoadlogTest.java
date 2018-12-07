@@ -27,7 +27,7 @@ public class RoadlogTest {
     private Connector connector;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
 
         roadlog = new Roadlog();
         Connector.input = TEST_FILE_PATH;

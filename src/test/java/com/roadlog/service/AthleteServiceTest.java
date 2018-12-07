@@ -39,7 +39,7 @@ public class AthleteServiceTest {
     private static final int Foo_Bar_Score = 3099;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         connector = new Connector();
         decathlon = new Roadlog();
         Connector.input = TEST_FILE_PATH;

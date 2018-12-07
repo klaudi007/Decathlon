@@ -1,10 +1,12 @@
 package com.roadlog.util;
 
+import com.roadlog.exception.DecathlonException;
 import org.junit.Before;
 import org.junit.Test;
 
 import static com.roadlog.cons.App.OUTPUT_PATH;
 import static com.roadlog.cons.App.TEST_FILE_PATH;
+import static com.roadlog.cons.App.WRONG_TEST_FILE_PATH;
 import static org.junit.Assert.*;
 
 /**
@@ -16,7 +18,7 @@ public class ConnectorTest {
     private Connector connector;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         connector = new Connector();
         Connector.input = TEST_FILE_PATH;
         Connector.output = OUTPUT_PATH;
